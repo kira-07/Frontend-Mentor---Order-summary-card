@@ -1,0 +1,115 @@
+:root{
+    /*----COLOR----*/
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+
+    /*----RADIUS----*/
+    --borderradius: 15px;
+}
+
+@font-face { 
+    font-family: RedHatDisplay; src: url('fonts/RedHatDisplay-VariableFont_wght.ttf'); 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: RedHatDisplay, sans-serif;
+    background: url('images/pattern-background-desktop.svg') no-repeat;
+    background-color: var(--paleblue);
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: var(--borderradius);
+}
+
+.header-image{
+    width: 375px;
+    border-top-right-radius: var(--borderradius);
+    border-top-left-radius: var(--borderradius);
+}
+
+h1{
+    margin-bottom: 5px;
+    text-align: center;
+    color:var(--darkblue);
+}
+main > p {
+    text-align: center;
+    margin: 20px;
+    color: var(--desaturatedblue);
+}
+
+.data-flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    background-color: var(--verypaleblue);
+    border-radius: var(--borderradius);
+}
+
+.annual-plan{
+    flex-grow: 1;
+}
+
+.annual-plan p {
+    font-size: 13px;
+    margin: 20px;
+}
+
+.price{
+    color: var(--desaturatedblue);
+}
+
+.payment-link{
+    margin: 20px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    border-radius: var(--borderradius);
+    background-color: var(--brightblue);
+    color:#fff;
+    text-decoration: none;
+    font-family: RedHatDisplay, sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: 0px 10px 5px 5px hsla(225deg, 100%, 94%, 0.5);
+}
+
+.cancel-link{
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--desaturatedblue);
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-image: url('images/pattern-background-mobile.svg');
+    }
+}
